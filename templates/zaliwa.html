@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaliwa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action='/predict' method="POST">
+        <div class="inputBox">
+            <label>Age</label>
+            <input id="age" name='age'type="float">
+            
+        </div>
+        <div>
+            <label>SystolicBP</label>
+            <input  type = "number" name="systolicBP" id='systolicBP'type="float">
+            
+        </div>
+        <div class="inputBox">
+            <label>DiastolicBP</label>
+            <input type="float" required="required" name="diastolicBP" id="diastolicBP">
+            
+        </div>
+        <div class="inputBox">
+            <label>BS</label>
+            <input type="float" required="required" name="bs" id="bs">
+          
+        </div>
+        <div class="inputBox">
+            <label>BodyTemp</label>
+            <input type="float" required="required" name="bodyTemp" id="bodyTemp">
+            
+        </div>
+        <div>
+            <label >HeartRate</label>
+            <input id="heartRate" name='heartRate'type="float">
+
+        </div>
+        <div class="inputBox">
+
+            <button> Predict</button>
+
+        </div>
+        <div class="outputBox">
+
+            <p> </p>
+
+        </div>
+    </form>
+</body>
+
+<script>
+    const btn1 = document.getElementById("btnSubmit");
+
+    function mlInputs() {
+        const Age = document.getElementById("age").value;
+        const systolicBP = document.getElementById("systolicBP").value;
+        const diastolicBP = document.getElementById("diastolicBP").value;
+        const bs = document.getElementById("bs").value;
+        const bodyTemp = document.getElementById("bodyTemp").value;
+        const heartRate = document.getElementById("heartRate").value;
+
+    }
+    btn1.addEventListener('click', mlInputs)
+
+
+
+</script>
+
+</html>
